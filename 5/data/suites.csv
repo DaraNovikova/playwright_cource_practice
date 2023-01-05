@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jan 05 22:35:13 GMT 2023","Thu Jan 05 22:35:29 GMT 2023","15270","chromium","","Basic tests for mageto web site","","","Verify product is added to the cart with right size and color",""
+"passed","Thu Jan 05 22:35:14 GMT 2023","Thu Jan 05 22:35:27 GMT 2023","13764","chromium","","Basic tests for mageto web site","","","Verify user can create an account and then log out",""
+"passed","Thu Jan 05 22:35:13 GMT 2023","Thu Jan 05 22:35:20 GMT 2023","7080","chromium","","Basic tests for mageto web site","","","Verify banners & content are displayed on the main page",""
