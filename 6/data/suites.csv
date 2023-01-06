@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jan 06 23:30:04 GMT 2023","Fri Jan 06 23:30:17 GMT 2023","12788","chromium","","Basic tests for mageto web site","","","User should be able to create an account and then log out",""
+"passed","Fri Jan 06 23:30:04 GMT 2023","Fri Jan 06 23:30:11 GMT 2023","7062","chromium","","Basic tests for mageto web site","","","User should see banners & content on the main page",""
+"passed","Fri Jan 06 23:30:05 GMT 2023","Fri Jan 06 23:30:19 GMT 2023","13989","chromium","","Basic tests for mageto web site","","","User should be able to add product to the cart with right size and color",""
