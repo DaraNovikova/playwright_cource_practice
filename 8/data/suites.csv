@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jan 19 19:30:54 GMT 2023","Thu Jan 19 19:31:00 GMT 2023","5378","chromium","","Basic tests for mageto web site","","","User should not be able to submit a form with non-existing order id and the rest valid data",""
+"passed","Thu Jan 19 19:30:43 GMT 2023","Thu Jan 19 19:30:58 GMT 2023","14970","chromium","","Basic tests for mageto web site","","","User should be able to add product to the cart with right size and color",""
+"passed","Thu Jan 19 19:30:43 GMT 2023","Thu Jan 19 19:30:54 GMT 2023","11728","chromium","","Basic tests for mageto web site","","","User should be able to create an account and then log out",""
+"passed","Thu Jan 19 19:30:48 GMT 2023","Thu Jan 19 19:30:55 GMT 2023","6920","chromium","","Basic tests for mageto web site","","","User should be able to see tees products image, price, reviews and ""Add To Cart"" button appears on mouse over",""
+"passed","Thu Jan 19 19:30:43 GMT 2023","Thu Jan 19 19:30:48 GMT 2023","5206","chromium","","Basic tests for mageto web site","","","User should see banners & content on the main page",""
