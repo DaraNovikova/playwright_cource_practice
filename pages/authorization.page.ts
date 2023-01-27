@@ -52,6 +52,7 @@ export default class AuthorizationPage {
     }
 
     async verifyWelcomeUserText(userName: string, userLastName: string){
+        await this.page.waitForLoadState();
         await this.page.waitForSelector(this.welcomeUserText);
         expect(await this.page.locator(this.welcomeUserText).innerText()).toMatch(`Welcome, ${userName} ${userLastName}!`);
     }

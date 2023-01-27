@@ -11,6 +11,7 @@ export default class BasePage {
     sorterLocator: string = "#sorter";
     sortingDirectionLocator: string = "a[data-role='direction-switcher']";
     productItemsLocator: string = ".product-item";
+    productLimiterPerPage: string = "#limiter";
     productNamesLocator: string = ".product-item-name";
     productPricesLocator: string = ".product-item .price";
 
@@ -54,6 +55,12 @@ export default class BasePage {
             await this.page.locator(this.sortingDirectionLocator).first().click();
         }
         await this.page.waitForLoadState('domcontentloaded');
+    }
+
+    async setProductLimiter(value: string) {
+        const productLimiter = this.page.locator(this.productLimiterPerPage).nth(1);
+        await productLimiter.selectOption(value);
+        await this.page.waitForLoadState();
     }
 
     async verifyProductsAreSortedByPriceAscending(condition = true) {

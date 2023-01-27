@@ -76,6 +76,7 @@ test.describe('Products tests for mageto web site', () => {
     await basePage.verifyProductsAreSortedByPriceAscending();
     await basePage.setSortingDirection(sortingDirections.ascending);
     await basePage.verifyProductsAreSortedByPriceAscending(false);
+    await basePage.setProductLimiter(sortValues.limiter);
     await basePage.sortByValue(sortValues.productName);
     await basePage.verifyProductsAreSortedByProductNameAscending(false);
     await basePage.setSortingDirection(sortingDirections.descending);
