@@ -1,15 +1,21 @@
 import { test } from '../fixture/fixture';
 import { userData } from '../test-data/testData';
 import { pageTitles } from '../test-data/pageTitles';
-import { colors, numberSizes, letterSizes, productItems } from '../test-data/productDetails';
+import { colors, numberSizes } from '../test-data/productDetails';
 
 test.describe('Wishlist tests for mageto web site', () => {
-
-  test.beforeEach(async ({ page, signInPage }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto('/');
   });
 
-  test('User should be able to add product from wishlist to cart', async ({ page, basePage, productPage, authorizationPage, myWishListPage, cartPage }) => {
+  test('User should be able to add product from wishlist to cart', async ({
+    page,
+    basePage,
+    productPage,
+    authorizationPage,
+    myWishListPage,
+    cartPage,
+  }) => {
     await authorizationPage.clickCreateAccountLink();
     await authorizationPage.fillFirstNameInputField(userData.firstName);
     await authorizationPage.fillLastNameInputField(userData.lastName);
@@ -34,6 +40,9 @@ test.describe('Wishlist tests for mageto web site', () => {
     await page.waitForSelector(cartPage.cartCountLocator);
     await myWishListPage.verifyNoItemsMessageIsVisible();
     await cartPage.openCartPage();
-    await cartPage.verifyProductItemSizeColor([numberSizes.twentyEightSize, colors.blue]);
+    await cartPage.verifyProductItemSizeColor([
+      numberSizes.twentyEightSize,
+      colors.blue,
+    ]);
   });
 });

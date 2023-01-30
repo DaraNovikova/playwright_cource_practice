@@ -14,75 +14,74 @@ import AdvancedSearchPage from '../pages/advancedSearch.page';
 import MyWishListPage from '../pages/myWishList.page';
 
 type pages = {
-    authorizationPage: AuthorizationPage,
-    mainPage: MainPage,
-    productPage: ProductPage,
-    cartPage: CartPage,
-    salePage: SalePage,
-    productTeesPage: ProductTeesPage,
-    formPage: FormPage,
-    basePage: BasePage,
-    myAccountPage: MyAccountPage,
-    editAccountInformationPage: EditAccountInformationPage,
-    signInPage: SignInPage,
-    advancedSearchPage: AdvancedSearchPage,
-    myWishListPage: MyWishListPage
-}
+  authorizationPage: AuthorizationPage;
+  mainPage: MainPage;
+  productPage: ProductPage;
+  cartPage: CartPage;
+  salePage: SalePage;
+  productTeesPage: ProductTeesPage;
+  formPage: FormPage;
+  basePage: BasePage;
+  myAccountPage: MyAccountPage;
+  editAccountInformationPage: EditAccountInformationPage;
+  signInPage: SignInPage;
+  advancedSearchPage: AdvancedSearchPage;
+  myWishListPage: MyWishListPage;
+};
 
 const testPages = baseTest.extend<pages>({
-    authorizationPage: async({page}, use) => {
-        await use(new AuthorizationPage(page));
-    },
+  authorizationPage: async ({ page }, use) => {
+    await use(new AuthorizationPage(page));
+  },
 
-    mainPage: async({page}, use) => {
-        await use(new MainPage(page));
-    },
+  mainPage: async ({ page }, use) => {
+    await use(new MainPage(page));
+  },
 
-    productPage: async({page}, use) => {
-        await use(new ProductPage(page));
-    },
+  productPage: async ({ page }, use) => {
+    await use(new ProductPage(page));
+  },
 
-    cartPage: async({page}, use) => {
-        await use(new CartPage(page));
-    },
+  cartPage: async ({ page }, use) => {
+    await use(new CartPage(page));
+  },
 
-    salePage: async({page}, use) => {
-        await use(new SalePage(page));
-    },
+  salePage: async ({ page }, use) => {
+    await use(new SalePage(page));
+  },
 
-    productTeesPage: async({page}, use) => {
-        await use(new ProductTeesPage(page));
-    },
+  productTeesPage: async ({ page }, use) => {
+    await use(new ProductTeesPage(page));
+  },
 
-    formPage: async({page}, use) => {
-        await use(new FormPage(page));
-    },
+  formPage: async ({ page }, use) => {
+    await use(new FormPage(page));
+  },
 
-    basePage: async({page}, use) => {
-        await use(new BasePage(page));
-    },
+  basePage: async ({ page }, use) => {
+    await use(new BasePage(page));
+  },
 
-    myAccountPage: async({page}, use) => {
-        await use(new MyAccountPage(page));
-    },
+  myAccountPage: async ({ page }, use) => {
+    await use(new MyAccountPage(page));
+  },
 
-    editAccountInformationPage: async({page}, use) => {
-        await use(new EditAccountInformationPage(page));
-    },
+  editAccountInformationPage: async ({ page }, use) => {
+    await use(new EditAccountInformationPage(page));
+  },
 
-    signInPage: async({page}, use) => {
-        await use(new SignInPage(page));
-    },
+  signInPage: async ({ page }, use) => {
+    await use(new SignInPage(page));
+  },
 
-    advancedSearchPage: async({page}, use) => {
-        await use(new AdvancedSearchPage(page));
-    },
+  advancedSearchPage: async ({ page }, use) => {
+    await use(new AdvancedSearchPage(page));
+  },
 
-    myWishListPage: async({page}, use) => {
-        await use(new MyWishListPage(page));
-    },
-
-})
+  myWishListPage: async ({ page }, use) => {
+    await use(new MyWishListPage(page));
+  },
+});
 
 export const test = testPages;
 export const expect = testPages.expect;
