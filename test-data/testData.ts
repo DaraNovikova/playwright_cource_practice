@@ -4,9 +4,9 @@ export const data = {
   firstName: 'TestName',
   lastName: 'TestLast',
   email: 'testmail589@gmail.com',
-  fakeEmail: 'testmail@gmail.com',
   password: 'testPass_1234',
   orderId: '000014423',
+  fakeOrderId: faker.random.numeric(9),
 };
 
 export const userData = {

@@ -55,11 +55,10 @@ test.describe('Products tests for mageto web site', () => {
   test('User should not be able to submit a form with non-existing order id and the rest valid data', async ({
     page,
     formPage,
-    authorizationPage,
     basePage,
   }) => {
     await page.goto('/sales/guest/form/');
-    await formPage.fillOrderIdField(authorizationPage.setRandomNumber(9));
+    await formPage.fillOrderIdField(data.fakeOrderId);
     await formPage.fillBillingLastNameField(data.lastName);
     await formPage.selectOptionInFindOrderByField('email');
     await formPage.fillEmailField(data.email);
@@ -111,6 +110,7 @@ test.describe('Products tests for mageto web site', () => {
     await basePage.verifyProductsAreSortedByPriceAscending();
     await basePage.setSortingDirection(sortingDirections.ascending);
     await basePage.verifyProductsAreSortedByPriceAscending(false);
+    await basePage.setProductLimiter(sortValues.limiter);
     await basePage.sortByValue(sortValues.productName);
     await basePage.verifyProductsAreSortedByProductNameAscending(false);
     await basePage.setSortingDirection(sortingDirections.descending);

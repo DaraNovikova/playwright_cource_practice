@@ -1,5 +1,5 @@
 import { test } from '../fixture/fixture';
-import { data, userData } from '../test-data/testData';
+import { userData } from '../test-data/testData';
 import { pageTitles } from '../test-data/pageTitles';
 import { errorMessages } from '../test-data/errorMessages';
 
@@ -12,18 +12,17 @@ test.describe('Login tests for mageto web site', () => {
     authorizationPage,
     basePage,
   }) => {
-    const email = authorizationPage.setRandomMail(data.fakeEmail, 3);
     await authorizationPage.clickCreateAccountLink();
     await basePage.verifyPageTitleText(pageTitles.createNewCustomer);
-    await authorizationPage.fillFirstNameInputField(data.firstName);
-    await authorizationPage.fillLastNameInputField(data.lastName);
-    await authorizationPage.fillEmailInputField(email);
-    await authorizationPage.fillPasswordInputField(data.password);
-    await authorizationPage.fillPasswordConfirmInputField(data.password);
+    await authorizationPage.fillFirstNameInputField(userData.firstName);
+    await authorizationPage.fillLastNameInputField(userData.lastName);
+    await authorizationPage.fillEmailInputField(userData.email);
+    await authorizationPage.fillPasswordInputField(userData.password);
+    await authorizationPage.fillPasswordConfirmInputField(userData.password);
     await authorizationPage.clickCreateAccountBtn();
     await authorizationPage.verifyWelcomeUserText(
-      data.firstName,
-      data.lastName
+      userData.firstName,
+      userData.lastName
     );
     await authorizationPage.clickLogOutBtn();
     await basePage.verifyPageTitleText(pageTitles.youAreSignOut);
