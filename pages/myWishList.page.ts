@@ -17,6 +17,7 @@ export default class MyWishListPage {
   }
 
   async addToCartProduct(productName: string) {
+    await this.page.waitForSelector(this.wishListProductsLocator(productName));
     await this.page.locator(this.wishListProductsLocator(productName)).hover();
     await this.page.click(this.addToCartBtn);
     await this.page.waitForLoadState();
