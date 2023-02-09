@@ -72,7 +72,7 @@ export default class BasePage {
     const productLimiter = this.page.locator(this.productLimiterPerPage).nth(1);
     await productLimiter.selectOption(value);
     await this.page.waitForLoadState();
-	}
+  }
 
   async verifyProductsAreSortedByPriceAscending(condition = true) {
     const actualPrices = await this.page
